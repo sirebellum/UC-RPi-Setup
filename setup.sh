@@ -1,6 +1,6 @@
 #update and upgrade packages
-sudo apt-get update
-sudo apt-get upgrade
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 #Set up hostname
 read -p "What would you like the hostname to be?: " hostname
