@@ -15,7 +15,6 @@ sudo touch /etc/ssmtp/ssmtp.conf
 sudo echo "root=postmaster" >> /etc/ssmtp/ssmtp.conf
 sudo echo "mailhub=smtp.gmail.com:587" >> /etc/ssmtp/ssmtp.conf
 sudo echo "hostname=$hostname" >> /etc/ssmtp/ssmtp.conf
-sudo echo "mailhub=smtp.gmail.com:587" >> /etc/ssmtp/ssmtp.conf
 sudo echo "FromLineOverride=YES" >> /etc/ssmtp/ssmtp.conf
 sudo echo "AuthUser=ucmms.pi@gmail.com" >> /etc/ssmtp/ssmtp.conf
 sudo echo "AuthPass=$password" >> /etc/ssmtp/ssmtp.conf
