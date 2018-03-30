@@ -22,14 +22,14 @@ sudo echo "AuthPass=$password" >> /etc/ssmtp/ssmtp.conf
 sudo echo "UseSTARTTLS=YES" >> /etc/ssmtp/ssmtp.conf
 
 #Setup IP at boot
-curl https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.sh
-curl https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.desktop
+wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.sh
+wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.desktop
 mv boot-ip.desktop /home/pi/.config/autostart/
 
 #Setup auto digital signage
 sudo apt-get -y install unclutter
-curl https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.sh
-curl https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.desktop
+wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.sh
+wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.desktop
 mv startup.desktop /home/pi/.config/autostart/
 
 echo "Done!"
