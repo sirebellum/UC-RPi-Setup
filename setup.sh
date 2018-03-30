@@ -13,7 +13,7 @@ read -p "Please enter password for ucmms.pi@gmail.com: " password
 #Write config file
 sudo touch /etc/ssmtp/ssmtp.conf
 echo "root=postmaster" | sudo tee --append /etc/ssmtp/ssmtp.conf
-echo "mailhub=smtp.gmail.com:587" >> /etc/ssmtp/ssmtp.conf
+echo "mailhub=smtp.gmail.com:587" | sudo tee --append /etc/ssmtp/ssmtp.conf
 echo "hostname=$hostname" | sudo tee --append /etc/ssmtp/ssmtp.conf
 echo "FromLineOverride=YES" | sudo tee --append> /etc/ssmtp/ssmtp.conf
 echo "AuthUser=ucmms.pi@gmail.com" | sudo tee --append /etc/ssmtp/ssmtp.conf
@@ -23,6 +23,7 @@ echo "UseSTARTTLS=YES" | sudo tee --append /etc/ssmtp/ssmtp.conf
 #Setup IP at boot
 wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.sh
 wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/boot-ip.desktop
+mkdir /home/pi/.config/autostart
 mv boot-ip.desktop /home/pi/.config/autostart/
 
 #Setup auto digital signage
