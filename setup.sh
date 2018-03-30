@@ -17,7 +17,7 @@ echo "mailhub=smtp.gmail.com:587" | sudo tee --append /etc/ssmtp/ssmtp.conf
 echo "hostname=$hostname" | sudo tee --append /etc/ssmtp/ssmtp.conf
 echo "FromLineOverride=YES" | sudo tee --append /etc/ssmtp/ssmtp.conf
 echo "AuthUser=ucmms.pi@gmail.com" | sudo tee --append /etc/ssmtp/ssmtp.conf
-echo "AuthPass=$password" | sudo tee --append /etc/ssmtp/ssmtp.conf
+echo "AuthPass=$password" | sudo tee --append /etc/ssmtp/ssmtp.conf > /dev/null
 echo "UseSTARTTLS=YES" | sudo tee --append /etc/ssmtp/ssmtp.conf
 
 #Setup IP at boot
