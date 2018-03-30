@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=boot-ip
+Comment=
+Exec=bash /home/pi/boot-ip.sh
+StartupNotify=false
+Terminal=false
+Hidden=false
