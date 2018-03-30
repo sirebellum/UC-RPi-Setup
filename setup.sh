@@ -32,4 +32,7 @@ wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.sh
 wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.desktop
 mv startup.desktop /home/pi/.config/autostart/
 
+#Change password
+passwd
+
 echo "Done!"
