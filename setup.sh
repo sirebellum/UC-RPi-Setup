@@ -9,7 +9,7 @@ echo $hostname | sudo tee /etc/hostname
 #Set up mail
 sudo apt-get -y install ssmtp
 sudo mv /etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf.org
-read -p "Please enter password for ucmms.pi@gmail.com: " password
+read -s -p "Please enter password for ucmms.pi@gmail.com: " password
 #Write config file
 sudo touch /etc/ssmtp/ssmtp.conf
 echo "root=postmaster" | sudo tee --append /etc/ssmtp/ssmtp.conf
