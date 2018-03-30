@@ -5,6 +5,8 @@ sudo apt-get -y upgrade
 #Set up hostname
 read -p "What would you like the hostname to be?: " hostname
 echo $hostname | sudo tee /etc/hostname
+sudo sed -i '$ d' /etc/hosts
+echo "127.0.1.1 $hostname" | sudo tee /etc/hosts
 
 #Set up mail
 sudo apt-get -y install ssmtp
