@@ -34,6 +34,10 @@ wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.sh
 wget https://raw.githubusercontent.com/sirebellum/UC-RPi-Setup/master/startup.desktop
 mv startup.desktop /home/pi/.config/autostart/
 
+#enable ssh
+sudo systemctl enable ssh
+sudo systemctl start ssh
+
 #Change password
 passwd
 
