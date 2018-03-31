@@ -7,4 +7,4 @@ echo -e "\n" >> /home/pi/IP-info
 echo $today >> /home/pi/IP-info
 echo -e "\n" >> /home/pi/IP-info
 ifconfig >> /home/pi/IP-info
-cat IP-info | sudo ssmtp -s $HOSTNAME Multimedia@utsa.edu
+cat IP-info | sudo mail -s $HOSTNAME Multimedia@utsa.edu

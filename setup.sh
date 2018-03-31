@@ -9,7 +9,7 @@ sudo sed -i '$ d' /etc/hosts
 echo "127.0.1.1 $hostname" | sudo tee --append /etc/hosts
 
 #Set up mail
-sudo apt-get -y install ssmtp
+sudo apt-get -y install mailutils ssmtp
 sudo mv /etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf.org
 read -s -p "Please enter password for ucmms.pi@gmail.com: " password
 #Write config file
