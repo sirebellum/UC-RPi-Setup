@@ -2,12 +2,6 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-#Set up hostname
-read -p "What would you like the hostname to be?: " hostname
-echo $hostname | sudo tee /etc/hostname
-sudo sed -i '$ d' /etc/hosts
-echo "127.0.1.1 $hostname" | sudo tee --append /etc/hosts
-
 #Set up mail
 sudo apt-get -y install mailutils ssmtp
 sudo mv /etc/ssmtp/ssmtp.conf /etc/ssmtp/ssmtp.conf.org
@@ -37,6 +31,12 @@ mv startup.desktop /home/pi/.config/autostart/
 #enable ssh
 sudo systemctl enable ssh
 sudo systemctl start ssh
+
+#Set up hostname
+read -p "What would you like the hostname to be?: " hostname
+echo $hostname | sudo tee /etc/hostname
+sudo sed -i '$ d' /etc/hosts
+echo "127.0.1.1 $hostname" | sudo tee --append /etc/hosts
 
 #Change password
 passwd
