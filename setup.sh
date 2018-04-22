@@ -32,13 +32,13 @@ mv startup.desktop /home/pi/.config/autostart/
 sudo systemctl enable ssh
 sudo systemctl start ssh
 
+#Change password
+passwd
+
 #Set up hostname
 read -p "What would you like the hostname to be?: " hostname
 echo $hostname | sudo tee /etc/hostname
 sudo sed -i '$ d' /etc/hosts
 echo "127.0.1.1 $hostname" | sudo tee --append /etc/hosts
-
-#Change password
-passwd
 
 echo "Done!"
